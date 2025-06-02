@@ -1,25 +1,40 @@
-import { Button } from '@/components/ui/button'
-import React from 'react'
+import { Button } from '@/components/ui/button';
+import React from 'react';
 
-function signup() {
+export default function Signup() {
   return (
-    <div>
-      <header>
-          Sign-in
-      </header>
-      <div>
-        <h4>
+    <div className="min-h-screen bg-blue-300 flex flex-col items-center justify-center px-4">
+      <header className="text-white text-3xl font-semibold mb-6">Sign-up</header>
+      <div className="bg-white rounded-lg shadow-md p-8 max-w-md w-full">
+        <h4 className="text-xl font-medium mb-6 text-gray-800 text-center">
           Signup for News-Nation
         </h4>
-        <input placeholder='Enter your Username' type='text'></input>
-        <input placeholder='Enter Your email' type='text' ></input>
-        <input placeholder='Enter Your password' type='password'></input>
-        <input placeholder='Confirm Your Password' type='password'></input>
-        <Button>Signup</Button>
+        <input
+          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your Username"
+          type="text"
+          autoComplete="username"
+        />
+        <input
+          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your Email"
+          type="email"
+          autoComplete="email"
+        />
+        <input
+          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your Password"
+          type="password"
+          autoComplete="new-password"
+        />
+        <input
+          className="w-full mb-6 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Confirm your Password"
+          type="password"
+          autoComplete="new-password"
+        />
+        <Button className="w-full">Signup</Button>
       </div>
     </div>
-  )
+  );
 }
-
-export default signup
-
